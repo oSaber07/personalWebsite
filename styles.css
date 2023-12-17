@@ -1,6 +1,16 @@
 @keyframes slideInLeft {
     from {
-        transform: translateX(-300px);
+        transform: translateX(-100px);
+    }
+
+    to {
+        transform:translateX(0px);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100px);
     }
 
     to {
@@ -10,7 +20,7 @@
 
 @keyframes slideInTop {
     from{
-        transform: translateY(-300px);
+        transform: translateY(-100px);
     }
 
     to {
@@ -20,16 +30,7 @@
 
 @keyframes slideInBottom {
     from {
-        transform: translateY(50px);
-    }
-    to {
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideInBottom--small {
-    from {
-        transform: translateY(25px);
+        transform: translateY(100px);
     }
     to {
         transform: translateY(0);
@@ -42,6 +43,16 @@
     }
     100%{
         opacity: 1;
+    }
+}
+
+@keyframes move-left {
+    0% {
+        transform:translateX(0);
+    }
+
+    100% {
+        transform:translateX(-100%);
     }
 }
 
@@ -66,40 +77,33 @@ h1, h2{
     text-align: center;
 }
 
-h1 {
-    font-size: 100px;
-}
-
-h2 {
-    font-size: 35px;
-    font-family: 'Montserrat', sans-serif;
-
-}
-
 #name {
     font-family: "Aguafina Script", script;
-    padding-top: 7%;
-    animation-name: fadein, slideInBottom;
-    animation-duration: 0.4s, 0.5s;
+    font-size: 120px;
+    padding-top: 5%;
+    animation-name: fadein, slideInTop;
+    animation-duration: 0.3s, 0.4s;
     animation-timing-function: ease;
-    animation-delay: 0.2s;
+    animation-delay: 0.3s;
     animation-fill-mode: both;
 }
 
 #label {
-    margin-top: -50px;
-    animation-name: fadein, slideInBottom--small;
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: -75px;
+    animation-name: fadein, slideInTop;
     animation-duration: 0.4s, 0.5s;
     animation-timing-function: ease;
-    animation-delay: .8s;
+    animation-delay: 1s;
     animation-fill-mode: both;
 }
 
 .button {
-    animation-name: fadein, slideInBottom--small;
+    animation-name: fadein, slideInBottom;
     animation-duration: 0.4s, 0.5s;
     animation-timing-function: ease;
-    animation-delay: 1.6s;
+    animation-delay: 1s;
     animation-fill-mode: backwards;
     color: black;
     transition-duration: 0.3s;
@@ -118,6 +122,8 @@ h2 {
     margin-right: auto;
     display: flex;
     justify-content: space-evenly;
+    margin-top: -20px;
+    margin-bottom: 15px;
 }
 
 .spacer {
@@ -130,4 +136,48 @@ h2 {
 
 .layer1 {
     background-image: url("layered-waves-haikei.svg");
+}
+
+.wrapper {
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.wrapper p {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 50px;
+    white-space: nowrap;
+    padding: 0 6rem;
+    letter-spacing: 1px;
+    animation: move-left 3000ms linear infinite;
+}
+
+.langimage { 
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    animation-name: fadein, slideInBottom;
+    animation-duration: 0.4s, 0.5s;
+    animation-timing-function: ease;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+}
+
+.imagelang {
+    width: 125px;
+}
+
+#codinglang {
+    text-align: center;
+    font-size: 40px;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    animation-name: fadein, slideInTop;
+    animation-duration: 0.4s, 0.5s;
+    animation-timing-function: ease;
+    animation-delay: 2s;
+    animation-fill-mode: both;
 }
